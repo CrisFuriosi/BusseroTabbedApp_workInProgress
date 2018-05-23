@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Title for the application. [CHAR LIMIT=20] -->
+    <string name="app_name">Welcome to Bussero</string>
+
+    <!-- Category names (on tabs). [CHAR LIMIT=20] -->
+    <string name="tab_eat">Eat</string>
+    <string name="tab_shop">Shop</string>
+    <string name="tab_move">Move</string>
+    <string name="tab_relax">Relax</string>
+
+    <!-- Strings in Eat tab: item name strings [CHAR LIMIT=NONE] -->
+    <string name="eat_name_baker_1">Pan per Focaccia</string>
+    <string name="eat_name_baker_2">Panificio Atelier dei Sapori</string>
+    <string name="eat_name_icecream">Gelateria Ice Dream</string>
+    <string name="eat_name_pizza_takeaway_1">Pizzeria l\'Ombelico del Mondo</string>
+    <string name="eat_name_pizza_takeaway_2">Pizzeria Oasi</string>
+    <string name="eat_name_pizza_takeaway_3">Pizzeria Papillon</string>
+    <string name="eat_name_pizza_restaurant">Pizzeria Anna</string>
+    <string name="eat_name_fish_restaurant">Lupo di Mare</string>
+    <string name="eat_name_beer">Km Zero Pub</string>
+    <string name="eat_name_wine">Bottega Bussero</string>
+
+    <!-- Strings in Eat tab: item description strings [CHAR LIMIT=NONE] -->
+    <string name="eat_description_baker_1">Bread, focaccia, cakes and pastries</string>
+    <string name="eat_description_baker_2">Bread, focaccia, cakes and pastries</string>
+    <string name="eat_description_icecream">Ice cream, milk shakes, yogurt, crepes, croissants and fruit</string>
+    <string name="eat_description_pizza_takeaway_1">take-away pizza and fries</string>
+    <string name="eat_description_pizza_takeaway_2">take-away pizza, kebab and fries</string>
+    <string name="eat_description_pizza_takeaway_3">take-away pizza, kebab and fries</string>
+    <string name="eat_description_pizza_restaurant">Pizza, pasta, and the best traditional cuisine of northern Italy</string>
+    <string name="eat_description_fish_restaurant">If you want to eat fish, this is the restaurant you\'re looking for</string>
+    <string name="eat_description_beer">The right place to drink a beer in the company of local bikers</string>
+    <string name="eat_description_wine">A glass of wine and a few slices of salami to whet your appetite before dinner</string>
+
+    <!-- Strings in Shop tab: item name strings [CHAR LIMIT=NONE] -->
+    <string name="shop_name_pharmacy_1">Farmacia Europa</string>
+    <string name="shop_name_supermarket">Coop Supermarket</string>
+    <string name="shop_name_bank">Banca di Credito Coperativo di Carugate</string>
+    <string name="shop_name_art">Willow</string>
+    <string name="shop_name_oilstation">Distributore Agip</string>
+    <string name="shop_name_bikes">Cicli Chirico</string>
+    <string name="shop_name_pharmacy_2">Farmacia Chimica Ghiozzi</string>
+    <string name="shop_name_herbalist">Erboristeria Grazia</string>
+    <string name="shop_name_milk">Latte e formaggi tipici</string>
+    <string name="shop_name_farmhouse">Cascina San Pietro</string>
+
+    <!-- Strings in Shop tab: item description strings [CHAR LIMIT=NONE] -->
+    <string name="shop_description_pharmacy_1">Pharmacy, cosmetics, veterinary</string>
+    <string name="shop_description_supermarket">A small supermarket, but you always find what you are looking for</string>
+    <string name="shop_description_bank">Our territory bank</string>
+    <string name="shop_description_art">Paintings and objects in pop style</string>
+    <string name="shop_description_oilstation">Does your vehicle need fuel?</string>
+    <string name="shop_description_bikes">The right bicycles to explore our cycle paths</string>
+    <string name="shop_description_pharmacy_2">Pharmacy, cosmetics, veterinary</string>
+    <string name="shop_description_herbalist">Herbal teas, supplements and products</string>
+    <string name="shop_description_milk">Milk and typical local cheeses</string>
+    <string name="shop_description_farmhouse">Buy farm products directly, or rent spaces for your events</string>
+
+    <!-- Strings in Move tab: item name strings [CHAR LIMIT=NONE] -->
+    <string name="move_name_subway">Metropolitana</string>
+    <string name="move_name_bus">Bus Navetta</string>
+    <string name="move_name_bike_lane">Pista ciclabile</string>
+    <string name="move_name_footpaths">Sentieri sterrati</string>
+    <string name="move_name_camper">Rimessaggio camper</string>
+
+    <!-- Strings in Move tab: item description strings [CHAR LIMIT=NONE] -->
+    <string name="move_description_move_name_subway">The underground links the towns of the area to Milan</string>
+    <string name="move_description_bus">The shuttle bus connects every place in Bussero to the metropolitan stop</string>
+    <string name="move_description_bike_lane">The cycle paths cross the territory and are constantly expanding</string>
+    <string name="move_description_footpaths">Being in a very green area, Bussero is full of paths</string>
+    <string name="move_description_camper">Did you arrive in a camper or caravan? In this parking lot you can take care of it</string>
+
+    <!-- Strings in Relax tab: item name strings [CHAR LIMIT=NONE] -->
+    <string name="relax_name_escape_room">Break Out Escape Room</string>
+    <string name="relax_name_big_park">Parco del Molgora</string>
+    <string name="relax_name_park_carabinieri">Parco di via Carabinieri Caduti</string>
+    <string name="relax_name_park_donatori">Parco Donatori del Sangue</string>
+    <string name="relax_name_library">Biblioteca pubblica</string>
+    <string name="relax_name_cascina">Cascina Gogna e il canale Martesana</string>
+    <string name="relax_name_villa">Villa Radaelli</string>
+    <string name="relax_name_cani">Zona Cani</string>
+    <string name="relax_name_parrocchia">Parrocchia dei Santi Nazaro e Celso</string>
+    <string name="relax_name_fuoco">Fuoco e Aria Bed &amp; Breakfast</string>
+
+    <!-- Strings in Relax tab: item description strings [CHAR LIMIT=NONE] -->
+    <string name="relax_description_escape_room">You have 60 minutes to solve the puzzles, find the key and run away from the room. Will you be able to escape?</string>
+    <string name="relax_description_big_park">A protected agricultural park surrounds the waters of the Molgora stream. Discover its paths and cultivated fields</string>
+    <string name="relax_description_park_carabinieri">The sports park. Here you can go jogging, or you can organize a football or basketball game</string>
+    <string name="relax_description_park_donatori">Equipped park dedicated to children. Every Thursday the park hosts a colorful market</string>
+    <string name="relax_description_library">The public library offers indoor and outdoor reading spaces, and an area dedicated to children</string>
+    <string name="relax_description_cascina">The romantic view of a 16th century settlement, overlooking the Martesana canal</string>
+    <string name="relax_description_villa">Elegant country villa built in the first half of the seventeenth century</string>
+    <string name="relax_description_cani">A protected green area where our animal friends can play freely</string>
+    <string name="relax_description_parrocchia">Church dedicated to the patron Saints of the city</string>
+    <string name="relax_description_fuoco">Bed &amp; breakfast for families, surrounded by greenery</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
