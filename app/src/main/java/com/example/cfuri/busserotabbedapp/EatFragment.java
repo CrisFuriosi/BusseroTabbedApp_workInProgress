@@ -1,83 +1,57 @@
 package com.example.cfuri.busserotabbedapp;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import static android.widget.AdapterView.OnItemClickListener;
-
 public class EatFragment extends Fragment {
 
-    // Define Fragment Listener
-    private OnFragmentInteractionListener mListener;
-
+    // Required empty public constructor
     public EatFragment() {
-        // Required empty public constructor
     }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
-
-    private Place currentPlace;
-
+     * onCreateView() finds the view to show current Fragment, and inflates its contents
+    * */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Inflate the ListView
         View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         //Create an ArrayList of places
         final ArrayList<Place> places = new ArrayList<>();
 
-        // Create an ArrayList of Place objects
-        places.add(new Place(R.string.eat_name_baker_1, R.string.eat_description_baker_1, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_baker_2, R.string.eat_description_baker_2, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_icecream, R.string.eat_description_icecream, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_pizza_takeaway_1, R.string.eat_description_pizza_takeaway_1, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_pizza_takeaway_2, R.string.eat_description_pizza_takeaway_2, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_pizza_takeaway_3, R.string.eat_description_pizza_takeaway_3, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_pizza_restaurant, R.string.eat_description_pizza_restaurant, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_fish_restaurant, R.string.eat_description_fish_restaurant, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_beer, R.string.eat_description_beer, R.drawable.bussero_villasiolilegnani_small));
-        places.add(new Place(R.string.eat_name_wine, R.string.eat_description_wine, R.drawable.bussero_villasiolilegnani_small));
+        // Create an ArrayList of Place objects, where each Place contains:
+        // 1. name of current place in strings.xml
+        //  2. the short description of current place in strings.xml
+        //  3. the icon image of current place in drawable folder
+        //  4. the descriptive (bigger) image of current place in drawable folder
+        //  5. the address of current place in strings.xml
+        //  (see Place.class)
+        places.add(new Place(R.string.eat_name_baker_pan, R.string.eat_description_baker_pan, R.drawable.eat_baker_pan_icon,
+                R.drawable.eat_baker_pan, R.string.eat_coordinates_baker_pan));
+        places.add(new Place(R.string.eat_name_baker_atelier, R.string.eat_description_baker_atelier, R.drawable.eat_baker_atelier_icon,
+                R.drawable.eat_baker_atelier, R.string.eat_coordinates_baker_atelier));
+        places.add(new Place(R.string.eat_name_icecream, R.string.eat_description_icecream, R.drawable.eat_icecream_icon,
+                R.drawable.eat_icecream, R.string.eat_coordinates_icecream));
+        places.add(new Place(R.string.eat_name_pizza_takeaway_oasi, R.string.eat_description_pizza_takeaway_oasi,
+                R.drawable.eat_pizza_takeaway_oasi_icon, R.drawable.eat_pizza_takeaway_oasi, R.string.eat_coordinates_pizza_takeaway_oasi));
+        places.add(new Place(R.string.eat_name_pizzeria_circolo, R.string.eat_description_pizzeria_circolo, R.drawable.eat_pizzeria_circolo_icon,
+                R.drawable.eat_pizzeria_circolo, R.string.eat_coordinates_pizzeria_circolo));
+        places.add(new Place(R.string.eat_name_lupo_fish_restaurant, R.string.eat_description_lupo_fish_restaurant,
+                R.drawable.eat_lupo_fish_restaurant_icon, R.drawable.eat_lupo_fish_restaurant, R.string.eat_coordinates_lupo_fish_restaurant));
+        places.add(new Place(R.string.eat_name_zero_pub, R.string.eat_description_zero_pub, R.drawable.eat_zero_pub_icon,
+                R.drawable.eat_zero_pub, R.string.eat_coordinates_zero_pub));
+        places.add(new Place(R.string.eat_name_bottega, R.string.eat_description_bottega, R.drawable.eat_bottega_icon,
+                R.drawable.eat_bottega, R.string.eat_coordinates_bottega));
 
         // Create an {@link ArrayAdapter}.
         final PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), places);
@@ -88,25 +62,7 @@ public class EatFragment extends Fragment {
         // Make the {@link ListView} use the {@link ArrayAdapter}.
         listView.setAdapter(placeAdapter);
 
-        // Set OnItemClickListener: open ItemDetailActivity when item is clicked
-        listView.setOnItemClickListener(new OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                PlaceDetailFragment detailFragment = new PlaceDetailFragment();
-
-                // Find current item
-                currentPlace = placeAdapter.getItem(position);
-
-                //
-
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.viewpager, detailFragment);
-                // Inflate the layout for this fragment
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                ft.commit();
-            }
-        });
+        // Return the completed View to render on screen
         return rootView;
     }
 

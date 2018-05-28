@@ -1,6 +1,7 @@
 package com.example.cfuri.busserotabbedapp;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -10,14 +11,11 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 class TabFragmentAdapter extends FragmentPagerAdapter {
 
-    /**
-     * Context of the app
-     */
+    // Context of the app
     private final Context mContext;
 
     /**
      * Create a new {@link TabFragmentAdapter} object.
-     *
      * @param context is the context of the app
      * @param fm      is the fragment manager that will keep each fragment's state in the adapter
      *                across swipes.
@@ -27,14 +25,14 @@ class TabFragmentAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-    /**
-     * Return total number of pages
-     */
+    // Method returns total number of pages
     @Override
     public int getCount() {
         return 4;
     }
 
+    // Method returns right fragment for each index position
+    @NonNull
     @Override
     public Fragment getItem(int position) {
         switch (position) {
@@ -45,9 +43,14 @@ class TabFragmentAdapter extends FragmentPagerAdapter {
             case 2:
                 return new MoveFragment();
             default:
-                return new RelaxFragment();
+                return new VisitFragment();
         }
     }
+
+    /** Method returns tab titles.
+     * @param position is the index position
+     * @return current tab title
+     */
 
     @Override
     public CharSequence getPageTitle(int position) {
@@ -59,7 +62,7 @@ class TabFragmentAdapter extends FragmentPagerAdapter {
             case 2:
                 return mContext.getString(R.string.tab_move);
             default:
-                return mContext.getString(R.string.tab_relax);
+                return mContext.getString(R.string.tab_visit);
         }
     }
 }
