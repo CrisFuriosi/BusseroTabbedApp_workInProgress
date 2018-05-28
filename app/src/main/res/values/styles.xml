@@ -8,4 +8,56 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Style for place names in places lists -->
+    <style name="style_place_name_in_list">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Style for icon images in places lists -->
+    <style name="style_place_icon_image_in_list">
+        <item name="android:contentDescription">@string/icon_image_description</item>
+        <item name="android:padding">@dimen/image_border</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_width">@dimen/icon_image_width</item>
+        <item name="android:layout_height">@dimen/icon_image_height</item>
+    </style>
+
+    <!-- Style for place names in activity_place_detail -->
+    <style name="style_place_name_in_detail">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:shadowColor">@color/colorDivider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Style for big images in activity_place_detail -->
+    <style name="style_place_image_in_detail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/container</item>
+        <item name="android:contentDescription">@string/detail_image_description</item>
+    </style>
+
+    <style name="style_place_address_in_detail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:drawablePadding">@dimen/padding</item>
+        <item name="android:drawableLeft">@drawable/ic_room</item>
+        <item name="android:drawableStart">@drawable/ic_room</item>
+    </style>
+
 </resources>
